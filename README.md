@@ -6,8 +6,8 @@
 
 A Esbuild plugin for copying assets into the output directory of your bundle
 
-- ~6.1kb size
-- ~2.5kb minified + gzipped
+- ~7.96kb size
+- ~2.54kb minified + gzipped
 
 ## Install
 
