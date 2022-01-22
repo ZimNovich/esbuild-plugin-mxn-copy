@@ -78,5 +78,6 @@ This module is released under the MIT license.
 
 ## Related
 
+- [rollup-plugin-mxn-copy](https://github.com/ZimNovich/rollup-plugin-mxn-copy) - Rollup plugin for copying assets into the output directory of your bundle
 - [rollup-plugin-mxn-jsx](https://github.com/ZimNovich/rollup-plugin-mxn-jsx) - Rollup JSX plugin that transpiles JSX into JavaScript
 - [rollup-plugin-mxn-svg](https://github.com/ZimNovich/rollup-plugin-mxn-svg) - Rollup plugin that imports SVG files as JSX components
