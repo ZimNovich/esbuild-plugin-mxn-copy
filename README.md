@@ -62,7 +62,7 @@ build({
 .catch((e) => console.error(e.message));
 ```
 
-Then call `rollup` either via the [CLI](https://www.rollupjs.org/guide/en/#command-line-reference) or the [API](https://www.rollupjs.org/guide/en/#javascript-api).
+Then call `node esbuild.config.js`.
 
 On final bundle generation the provided files will be copied over into the output folder of your rollup bundle, maintaining the original hierarchy and relativity to the input file.
 
