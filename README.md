@@ -1,10 +1,10 @@
 # esbuild-plugin-mxn-copy
 
-[![npm@latest](https://badgen.net/npm/v/rollup-plugin-mxn-copy)](https://www.npmjs.com/package/esbuild-plugin-mxn-copy)
-[![Install size](https://packagephobia.now.sh/badge?p=rollup-plugin-mxn-copy)](https://packagephobia.now.sh/result?p=esbuild-plugin-mxn-copy)
-[![Downloads](https://img.shields.io/npm/dm/rollup-plugin-mxn-copy.svg)](https://npmjs.com/esbuild-plugin-mxn-copy)
+[![npm@latest](https://badgen.net/npm/v/esbuild-plugin-mxn-copy)](https://www.npmjs.com/package/esbuild-plugin-mxn-copy)
+[![Install size](https://packagephobia.now.sh/badge?p=esbuild-plugin-mxn-copy)](https://packagephobia.now.sh/result?p=esbuild-plugin-mxn-copy)
+[![Downloads](https://img.shields.io/npm/dm/esbuild-plugin-mxn-copy.svg)](https://npmjs.com/esbuild-plugin-mxn-copy)
 
-An Esbuild plugin for copying assets into the output directory of your bundle
+A Esbuild plugin for copying assets into the output directory of your bundle
 
 - ~6.1kb size
 - ~2.5kb minified + gzipped
@@ -29,12 +29,12 @@ preact
 
 We want some of these files to be copied over into the output folder of our esbuild bundle.
 
-Create a `esbuild.config.js` [configuration file](https://www.rollupjs.org/guide/en/#configuration-files) and import the plugin:
+Create a `esbuild.config.js` [build script file](https://esbuild.github.io/getting-started/#build-scripts) and import the plugin:
 
 ```js
-// rollup.config.js
+// esbuild.config.js
 // ... other imports ...
-import rollupMxnCopy from "rollup-plugin-mxn-copy";
+import esbuildMxnCopy from "esbuild-plugin-mxn-copy";
 // ... other imports, etc ...
 
 export default {
@@ -46,7 +46,7 @@ export default {
 	},
 	plugins: [
 		// ... other plugins ...
-		rollupMxnCopy({
+		esbuildMxnCopy({
 			copy: [
 				// You can include files & directories
 				{ from: "src/index.html", to: "bundle/index.html" },
