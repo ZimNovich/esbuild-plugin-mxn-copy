@@ -1,0 +1,32 @@
+{
+    "name": "esbuild-plugin-mxn-copy",
+    "main": "esbuild-plugin-mxn-copy.js",
+    "description": "Esbuild plugin for copying assets into the output directory of your bundle",
+    "version": "1.0.0",
+    "homepage": "https://github.com/ZimNovich/esbuild-plugin-mxn-copy",
+    "license": "MIT",
+    "author": {
+        "name": "Ilya Zimnovich",
+        "email": "zimnovich@gmail.com"
+    },
+    "keywords": [
+        "esbuild",
+        "esbuild-plugin",
+        "bundle",
+        "copy",
+        "assets"
+    ],
+    "dependencies": {
+    },
+    "deprecated": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ZimNovich/esbuild-plugin-mxn-copy"
+    },
+    "bugs": {
+        "url": "https://github.com/ZimNovich/esbuild-plugin-mxn-copy/issues"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+}
