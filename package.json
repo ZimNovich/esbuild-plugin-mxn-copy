@@ -2,7 +2,7 @@
     "name": "esbuild-plugin-mxn-copy",
     "main": "esbuild-plugin-mxn-copy.js",
     "description": "Esbuild plugin for copying assets into the output directory of your bundle",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/ZimNovich/esbuild-plugin-mxn-copy",
     "license": "MIT",
     "author": {
