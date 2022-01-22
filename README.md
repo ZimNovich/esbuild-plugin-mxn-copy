@@ -50,9 +50,9 @@ build({
         esbuildMxnCopy({
             copy: [
                 // You can include files & directories
-		{ from: "src/index.html", to: "bundle/index.html" },
-		{ from: "src/logo.svg",   to: "bundle/" },
-		{ from: "src/preact",     to: "bundle/preact" }
+		{ from: "src/index.html", to: "dist/index.html" },
+		{ from: "src/logo.svg",   to: "dist/" },
+		{ from: "src/preact",     to: "dist/preact" }
             ],
             verbose: true
         })
