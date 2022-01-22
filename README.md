@@ -62,7 +62,21 @@ build({
 .catch((e) => console.error(e.message));
 ```
 
-Then call `node esbuild.config.js`.
+Then call `node esbuild.config.js` or add a build script to your `package.json` file like this:
+
+```json
+{
+  "scripts": {
+    "build": "node esbuild.config.js"
+  }
+}
+```
+
+The build script can now be invoked like this:
+
+```
+$ npm run build
+```
 
 On final bundle generation the provided files will be copied over into the output folder of your rollup bundle, maintaining the original hierarchy and relativity to the input file.
 
