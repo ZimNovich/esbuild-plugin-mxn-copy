@@ -33,29 +33,33 @@ Create a `esbuild.config.js` [build script file](https://esbuild.github.io/getti
 
 ```js
 // esbuild.config.js
-// ... other imports ...
+import { build } from "esbuild";
 import esbuildMxnCopy from "esbuild-plugin-mxn-copy";
 // ... other imports, etc ...
 
-export default {
-	input: "src/index.js",
-	// ...
-	output: {
-		file: "bundle/bundle.js",
-		format: "iife"
-	},
-	plugins: [
-		// ... other plugins ...
-		esbuildMxnCopy({
-			copy: [
-				// You can include files & directories
-				{ from: "src/index.html", to: "bundle/index.html" },
-				{ from: "src/logo.svg",   to: "bundle/" },
-				{ from: "src/preact",     to: "bundle/preact" }
-			]
-		})
-	]
-};
+build({
+    entryPoints: {
+        bundle: "src/index.js"
+    },
+    bundle: true,
+    minify: false,
+    sourcemap: true,
+    outdir: "dist",
+    // ...
+    plugins: [
+        esbuildMxnCopy({
+            copy: [
+                // You can include files & directories
+		{ from: "src/index.html", to: "bundle/index.html" },
+		{ from: "src/logo.svg",   to: "bundle/" },
+		{ from: "src/preact",     to: "bundle/preact" }
+            ],
+            verbose: true
+        })
+    ],
+    // ...
+})
+.catch((e) => console.error(e.message));
 ```
 
 Then call `rollup` either via the [CLI](https://www.rollupjs.org/guide/en/#command-line-reference) or the [API](https://www.rollupjs.org/guide/en/#javascript-api).
