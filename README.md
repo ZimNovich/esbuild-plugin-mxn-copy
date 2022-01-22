@@ -6,8 +6,7 @@
 
 A Esbuild plugin for copying assets into the output directory of your bundle
 
-- ~7.96kb size
-- ~2.54kb minified + gzipped
+- ~12.7kb size
 
 ## Install
 
@@ -38,26 +37,26 @@ import esbuildMxnCopy from "esbuild-plugin-mxn-copy";
 // ... other imports, etc ...
 
 build({
-    entryPoints: {
-        bundle: "src/index.js"
-    },
-    bundle: true,
-    minify: false,
-    sourcemap: true,
-    outdir: "dist",
-    // ...
-    plugins: [
-        esbuildMxnCopy({
-            copy: [
-                // You can include files & directories
-		{ from: "src/index.html", to: "dist/index.html" },
-		{ from: "src/logo.svg",   to: "dist/" },
-		{ from: "src/preact",     to: "dist/preact" }
-            ],
-            verbose: true
-        })
-    ],
-    // ...
+  entryPoints: {
+    bundle: "src/index.js"
+  },
+  bundle: true,
+  minify: false,
+  sourcemap: true,
+  outdir: "dist",
+  // ...
+  plugins: [
+    esbuildMxnCopy({
+      copy: [
+        // You can include files & directories
+          { from: "src/index.html", to: "dist/index.html" },
+          { from: "src/logo.svg",   to: "dist/" },
+          { from: "src/preact",     to: "dist/preact" }
+        ],
+      verbose: true
+    })
+  ],
+  // ...
 })
 .catch((e) => console.error(e.message));
 ```
